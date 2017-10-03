@@ -1,0 +1,21 @@
+{
+  "name": "reader",
+  "version": "0.0.1",
+  "main": "index.js",
+  "description": "1st version of rss skill.",
+  "author": "Fred Rybin",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "alexa",
+    "skill",
+    "fact"
+  ],
+  "dependencies": {
+    "alexa-sdk": "^1.0.14",
+    "feedparser": "^2.2.1",
+    "feedparser-promised": "^1.4.2",
+    "request": "^2.83.0"
+  }
+}
