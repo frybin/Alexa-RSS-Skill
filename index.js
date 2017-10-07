@@ -4,8 +4,6 @@ const Alexa = require('alexa-sdk');
 const feedparser = require('feedparser-promised');
 const url = 'http://www.wuxiaworld.com/feed/';
 function whatever() {
-
-
     return feedparser.parse(url).then((items) => {
         let rss = [];
         items.forEach(item => {
@@ -19,7 +17,7 @@ function whatever() {
 
 let handlers = {
     'LaunchRequest': function () {
-        this.emit('HelloWorldIntent');
+        this.emit('RSSWordIntent');
     },
 
     'HelloWorldIntent': function () {
