@@ -8,7 +8,8 @@ function whatever() {
         let rss = [];
         items.forEach(item => {
             //console.log('title:', item.categories[0])
-            rss.push(item.categories[0]);
+            let string = item.categories[0].replace('&', 'and');
+            rss.push(string);
         });
         return rss;
     }).catch(error => console.error('error: ', error));
@@ -32,7 +33,7 @@ let handlers = {
     }
 };
 
-exports.handler = function(event, context, callback) {
+exports.handle = function(event, context, callback) {
     let alexa = Alexa.handler(event, context, callback);
     alexa.registerHandlers(handlers);
     alexa.execute();
