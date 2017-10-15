@@ -4,6 +4,7 @@
   "main": "index.js",
   "description": "1st version of rss skill.",
   "author": "Fred Rybin",
+  "repository": "https://github.com/frybin/Alexa-RSS-Skill",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,6 +17,7 @@
     "alexa-sdk": "^1.0.14",
     "feedparser": "^2.2.1",
     "feedparser-promised": "^1.4.2",
-    "request": "^2.83.0"
+    "request": "^2.83.0",
+    "ya-csv": "^0.10.1"
   }
 }
