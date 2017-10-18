@@ -55,8 +55,30 @@ function call() {
         });
     })
 }
+
 /*
 call().then(temp => {
     console.log(temp);
 });
+*/
+
+/*
+function readFile() {
+    const csv = require('ya-csv');
+    const filecsv = 'data.csv';
+    return new Promise((resolve, reject) => {
+        let csvarray = [];
+        let reader = csv.createCsvFileReader(filecsv, {
+            'separator': ',',
+            'quote': '"',
+            'escape': '"',
+            'comment': '',
+        });
+        reader.on('data', function (item) {
+            csvarray.push(item);
+            resolve(csvarray);
+        })
+    });
+
+}
 */
