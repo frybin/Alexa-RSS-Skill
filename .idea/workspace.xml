@@ -1,100 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fad1e9b4-f62f-4e99-b220-f0edbff9af90" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/node_modules/sax/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/node_modules/sax/LICENSE-W3C.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/node_modules/sax/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/node_modules/sax/lib/sax.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/node_modules/sax/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/uuid/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/uuid/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/uuid/test/mocha.opts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/uuid/test/test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/npm-debug.log" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/CHANGELOG.md" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/CHANGELOG.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/README.md" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/cloudfront-2017-03-25.min.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/cloudfront-2017-03-25.min.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/cloudhsm-2014-05-30.min.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/cloudhsm-2014-05-30.min.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/codecommit-2015-04-13.min.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/codecommit-2015-04-13.min.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/dms-2016-01-01.min.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/dms-2016-01-01.min.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/ec2-2016-11-15.min.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/ec2-2016-11-15.min.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/ec2-2016-11-15.waiters2.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/ec2-2016-11-15.waiters2.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/ecr-2015-09-21.min.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/ecr-2015-09-21.min.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/ecr-2015-09-21.paginators.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/ecr-2015-09-21.paginators.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/elasticache-2015-02-02.min.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/elasticache-2015-02-02.min.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/elasticbeanstalk-2010-12-01.min.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/elasticbeanstalk-2010-12-01.min.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/elasticloadbalancingv2-2015-12-01.min.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/elasticloadbalancingv2-2015-12-01.min.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/email-2010-12-01.min.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/email-2010-12-01.min.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/es-2015-01-01.min.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/es-2015-01-01.min.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/glue-2017-03-31.min.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/glue-2017-03-31.min.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/kinesisanalytics-2015-08-14.min.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/kinesisanalytics-2015-08-14.min.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/lightsail-2016-11-28.min.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/lightsail-2016-11-28.min.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/metadata.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/metadata.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/opsworkscm-2016-11-01.min.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/opsworkscm-2016-11-01.min.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/organizations-2016-11-28.min.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/organizations-2016-11-28.min.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/pinpoint-2016-12-01.min.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/pinpoint-2016-12-01.min.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/rds-2013-01-10.min.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/rds-2013-01-10.min.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/rds-2013-02-12.min.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/rds-2013-02-12.min.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/rds-2013-09-09.min.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/rds-2013-09-09.min.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/rds-2014-09-01.min.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/rds-2014-09-01.min.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/rds-2014-10-31.min.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/rds-2014-10-31.min.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/rds-2014-10-31.waiters2.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/rds-2014-10-31.waiters2.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/redshift-2012-12-01.min.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/redshift-2012-12-01.min.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/route53domains-2014-05-15.min.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/route53domains-2014-05-15.min.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/sqs-2012-11-05.min.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/sqs-2012-11-05.min.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/ssm-2014-11-06.min.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/ssm-2014-11-06.min.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/waf-2015-08-24.min.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/waf-2015-08-24.min.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/apis/waf-regional-2016-11-28.min.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/apis/waf-regional-2016-11-28.min.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/clients/browser_default.d.ts" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/clients/browser_default.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/clients/browser_default.js" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/clients/browser_default.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/clients/cloudfront.d.ts" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/clients/cloudfront.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/clients/cloudhsm.d.ts" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/clients/cloudhsm.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/clients/cloudhsm.js" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/clients/cloudhsm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/clients/codecommit.d.ts" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/clients/codecommit.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/clients/configservice.d.ts" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/clients/configservice.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/clients/dms.d.ts" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/clients/dms.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/clients/ec2.d.ts" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/clients/ec2.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/clients/ecr.d.ts" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/clients/ecr.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/clients/elasticache.d.ts" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/clients/elasticache.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/clients/elasticbeanstalk.d.ts" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/clients/elasticbeanstalk.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/clients/elbv2.d.ts" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/clients/elbv2.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/clients/es.d.ts" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/clients/es.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/clients/glue.d.ts" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/clients/glue.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/clients/kinesisanalytics.d.ts" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/clients/kinesisanalytics.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/clients/lightsail.d.ts" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/clients/lightsail.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/clients/opsworkscm.d.ts" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/clients/opsworkscm.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/clients/organizations.d.ts" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/clients/organizations.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/clients/pinpoint.d.ts" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/clients/pinpoint.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/clients/polly.d.ts" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/clients/polly.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/clients/rds.d.ts" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/clients/rds.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/clients/redshift.d.ts" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/clients/redshift.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/clients/route53domains.d.ts" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/clients/route53domains.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/clients/ses.d.ts" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/clients/ses.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/clients/sqs.d.ts" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/clients/sqs.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/clients/ssm.d.ts" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/clients/ssm.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/clients/waf.d.ts" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/clients/waf.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/clients/wafregional.d.ts" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/clients/wafregional.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/dist/aws-sdk-core-react-native.js" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/dist/aws-sdk-core-react-native.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/dist/aws-sdk-react-native.js" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/dist/aws-sdk-react-native.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/dist/aws-sdk.js" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/dist/aws-sdk.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/dist/aws-sdk.min.js" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/dist/aws-sdk.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/lib/config.js" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/lib/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/lib/core.js" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/lib/core.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/aws-sdk/package.json" afterPath="$PROJECT_DIR$/node_modules/aws-sdk/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sax/lib/sax.js" afterPath="$PROJECT_DIR$/node_modules/sax/lib/sax.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sax/package.json" afterPath="$PROJECT_DIR$/node_modules/sax/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/uuid/README.md" afterPath="$PROJECT_DIR$/node_modules/uuid/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/uuid/bin/uuid" afterPath="$PROJECT_DIR$/node_modules/uuid/bin/uuid" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/uuid/lib/bytesToUuid.js" afterPath="$PROJECT_DIR$/node_modules/uuid/lib/bytesToUuid.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/uuid/lib/rng-browser.js" afterPath="$PROJECT_DIR$/node_modules/uuid/lib/rng-browser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/uuid/lib/rng.js" afterPath="$PROJECT_DIR$/node_modules/uuid/lib/rng.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/uuid/package.json" afterPath="$PROJECT_DIR$/node_modules/uuid/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/uuid/v1.js" afterPath="$PROJECT_DIR$/node_modules/uuid/v1.js" />
-    </list>
+    <list default="true" id="fad1e9b4-f62f-4e99-b220-f0edbff9af90" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +14,7 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
+            <state relative-caret-position="18">
               <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
               <folding />
             </state>
@@ -167,7 +74,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -181,6 +87,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -306,11 +213,12 @@
       <workItem from="1509237608783" duration="37000" />
       <workItem from="1509237672848" duration="439000" />
       <workItem from="1509298137857" duration="184000" />
+      <workItem from="1509498072759" duration="4000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="938000" />
+    <option name="totallyTimeSpent" value="942000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="260" y="53" width="1400" height="1000" extended-state="0" />
@@ -322,8 +230,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -333,8 +241,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -388,7 +296,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="18">
           <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
           <folding />
         </state>
