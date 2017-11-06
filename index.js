@@ -1,15 +1,39 @@
 const Alexa = require('alexa-sdk');
 //const reader = require('./rss_feed');
 
+const mysql = require('mysql');
+const config = require('config');
+const dbConfig = config.get('db_log.dbConfig');
+let con = mysql.createConnection(dbConfig);
+
+/*
+function dbcall() {
+    let feeds=[];
+    return new Promise((resolve, reject) => {
+        con.connect(function (err) {
+            if (err) throw err;
+            con.query("SELECT * FROM rss_feed", function (err, result, fields) {
+                if (err) throw err;
+                for (i = 0; i < result.length; i++) {
+                    feeds.push([i.toString(),result[i].name,result[i].link,result[i].article_1,result[i].article_2])
+                }
+                resolve(feeds);
+            });
+        });
+    })
+}
+
+dbcall().then(feeds => {
+    console.log(feeds);
+});
+*/
+
 function rssparser(link,article1,article2) {
     //Function used to return promised feed
     const feedparser = require('feedparser-promised');
-    //const url = 'http://www.wuxiaworld.com/feed/';
     return feedparser.parse(link).then((items) => {
-        //returns polulated rss array from the link in csv file
         let rss = [];
         items.forEach(item => {
-            //console.log('title:', item.categories[0])
             let string = '';
             if (article1 === 'categories'){
                 string = item[article1][0].replace('&', 'and');
@@ -27,6 +51,7 @@ function rssparser(link,article1,article2) {
         return rss;
     }).catch(error => console.error('error: ', error));
 }
+
 
 
 const csvarray = [ [ '0',
