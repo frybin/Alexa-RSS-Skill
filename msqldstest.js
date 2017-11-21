@@ -29,6 +29,7 @@ con.connect(function(err) {
 function dbcall() {
     let feeds=[];
     return new Promise((resolve, reject) => {
+        setTimeout(() => reject('woops'), 500);
         con.connect(function (err) {
             if (err) throw err;
             con.query("SELECT * FROM rss_feed", function (err, result, fields) {

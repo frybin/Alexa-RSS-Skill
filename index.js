@@ -6,10 +6,10 @@ const config = require('config');
 const dbConfig = config.get('db_log.dbConfig');
 let con = mysql.createConnection(dbConfig);
 
-/*
 function dbcall() {
     let feeds=[];
     return new Promise((resolve, reject) => {
+        //setTimeout(() => reject('woops'), 500);
         con.connect(function (err) {
             if (err) throw err;
             con.query("SELECT * FROM rss_feed", function (err, result, fields) {
@@ -26,7 +26,7 @@ function dbcall() {
 dbcall().then(feeds => {
     console.log(feeds);
 });
-*/
+
 
 function rssparser(link,article1,article2) {
     //Function used to return promised feed
@@ -115,6 +115,7 @@ let handlers = {
 };
 
 exports.handle = function(event, context, callback) {
+    context.callbackWaitsForEmptyEventLoop = false;
     let alexa = Alexa.handler(event, context, callback);
     alexa.registerHandlers(handlers);
     alexa.execute();
