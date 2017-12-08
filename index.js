@@ -4,25 +4,61 @@ const Alexa = require('alexa-sdk');
 const mysql = require('mysql');
 const config = require('config');
 const dbConfig = config.get('db_log.dbConfig');
-let con = mysql.createConnection(dbConfig);
+///let con = mysql.createConnection(dbConfig);
+let pool = mysql.createPool(dbConfig);
 
 function dbcall() {
     let feeds=[];
     return new Promise((resolve, reject) => {
-        //setTimeout(() => reject('woops'), 500);
-        con.connect(function (err) {
-            if (err) throw err;
-            con.query("SELECT * FROM rss_feed", function (err, result, fields) {
+
+        setTimeout(() => reject('woops'), 50000);
+        pool.getConnection(function(err, connection) {
+            // Use the connection
+            connection.query("SELECT * FROM rss_feed", function (err, result, fields) {
                 if (err) throw err;
                 for (i = 0; i < result.length; i++) {
                     feeds.push([i.toString(),result[i].name,result[i].link,result[i].article_1,result[i].article_2])
                 }
                 resolve(feeds);
+                connection.release();
+                // Handle error after the release.
+                if (err) throw err;
+                // Don't use the connection here, it has been returned to the pool.
             });
         });
     })
 }
 
+/*
+con.connect(function (err) {
+    if (err) throw err;
+    con.query("SELECT * FROM rss_feed", function (err, result, fields) {
+        if (err) throw err;
+        for (i = 0; i < result.length; i++) {
+            feeds.push([i.toString(),result[i].name,result[i].link,result[i].article_1,result[i].article_2])
+        }
+        connection.release();
+
+        resolve(feeds);
+    });
+});
+
+pool.getConnection(function(err, connection) {
+    // Use the connection
+    connection.query("SELECT * FROM rss_feed", function (err, result, fields) {
+        if (err) throw err;
+        for (i = 0; i < result.length; i++) {
+            feeds.push([i.toString(),result[i].name,result[i].link,result[i].article_1,result[i].article_2])
+        }
+        connection.release();
+
+        // Handle error after the release.
+        if (error) throw error;
+        resolve(feeds);
+        // Don't use the connection here, it has been returned to the pool.
+    });
+});
+*/
 dbcall().then(feeds => {
     console.log(feeds);
 });
@@ -89,12 +125,21 @@ let handlers = {
 
     'RSSLinkIntent': function () {
         let name = [];
-        for (let value=0; value<csvarray.length; value++){
+        dbcall().then(feeds => {
+            console.log(feeds);
+            for (let value=0; value<feeds.length; value++){
+                name.push(feeds[value][0]);
+                name.push(feeds[value][1]);
+            }
+            this.emit(':ask',`Would you like to open the rss feed for ${name}`, `Say: ${name}`);
+        });
+        /*for (let value=0; value<csvarray.length; value++){
             name.push(csvarray[value][0]);
             name.push(csvarray[value][1]);
         }
-        this.emit(':ask',`Would you like to open the rss feed for ${name}`, `Say: ${name}`);
+        this.emit(':ask',`Would you like to open the rss feed for ${name}`, `Say: ${name}`);*/
     },
+    
     'AMAZON.HelpIntent': function () {
         const speechOutput = 'This is the RSS Feed Reader Skill. ';
         const reprompt = 'Say read, to hear me speak.';
