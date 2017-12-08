@@ -1,22 +1,19 @@
 const Alexa = require('alexa-sdk');
-//const reader = require('./rss_feed');
-
 const mysql = require('mysql');
 const config = require('config');
 const dbConfig = config.get('db_log.dbConfig');
-///let con = mysql.createConnection(dbConfig);
 let pool = mysql.createPool(dbConfig);
 
 function dbcall() {
     let feeds=[];
     return new Promise((resolve, reject) => {
-
         setTimeout(() => reject('woops'), 50000);
         pool.getConnection(function(err, connection) {
             // Use the connection
             connection.query("SELECT * FROM rss_feed", function (err, result, fields) {
                 if (err) throw err;
                 for (i = 0; i < result.length; i++) {
+                    //Put results from
                     feeds.push([i.toString(),result[i].name,result[i].link,result[i].article_1,result[i].article_2])
                 }
                 resolve(feeds);
@@ -28,41 +25,6 @@ function dbcall() {
         });
     })
 }
-
-/*
-con.connect(function (err) {
-    if (err) throw err;
-    con.query("SELECT * FROM rss_feed", function (err, result, fields) {
-        if (err) throw err;
-        for (i = 0; i < result.length; i++) {
-            feeds.push([i.toString(),result[i].name,result[i].link,result[i].article_1,result[i].article_2])
-        }
-        connection.release();
-
-        resolve(feeds);
-    });
-});
-
-pool.getConnection(function(err, connection) {
-    // Use the connection
-    connection.query("SELECT * FROM rss_feed", function (err, result, fields) {
-        if (err) throw err;
-        for (i = 0; i < result.length; i++) {
-            feeds.push([i.toString(),result[i].name,result[i].link,result[i].article_1,result[i].article_2])
-        }
-        connection.release();
-
-        // Handle error after the release.
-        if (error) throw error;
-        resolve(feeds);
-        // Don't use the connection here, it has been returned to the pool.
-    });
-});
-
-dbcall().then(feeds => {
-    console.log(feeds);
-});
-*/
 
 function rssparser(link,article1,article2) {
     //Function used to return promised feed
@@ -88,23 +50,6 @@ function rssparser(link,article1,article2) {
     }).catch(error => console.error('error: ', error));
 }
 
-
-
-const csvarray = [ [ '0',
-    'Wuxiaworld',
-    'http://www.wuxiaworld.com/feed/',
-    'categories',
-    'title' ],
-    [ '1',
-        'Calculus',
-        'https://mycourses.rit.edu/d2l/le/news/rss/657095/course?token=avafqi245o0qvo7ddd22',
-        'title',
-        'description' ],
-    [ '2',
-        'Csec 101',
-        'https://mycourses.rit.edu/d2l/le/news/rss/660943/course?token=avafqi245o0qvo7ddd22',
-        'title',
-        'description' ] ];
 
 let handlers = {
     'LaunchRequest': function () {
@@ -136,11 +81,6 @@ let handlers = {
             console.log(name);
             this.emit(':ask',`Would you like to open the rss feed for ${name}`, `Say: ${name}`);
         });
-        /*for (let value=0; value<csvarray.length; value++){
-            name.push(csvarray[value][0]);
-            name.push(csvarray[value][1]);
-        }
-        this.emit(':ask',`Would you like to open the rss feed for ${name}`, `Say: ${name}`);*/
     },
     
     'AMAZON.HelpIntent': function () {
