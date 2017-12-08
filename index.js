@@ -11,6 +11,9 @@ function dbcall() {
         pool.getConnection(function(err, connection) {
             // Use the connection
             connection.query("SELECT * FROM rss_feed", function (err, result, fields) {
+                if (fields = ""){
+                    console.log(fields)
+                }
                 if (err) throw err;
                 for (i = 0; i < result.length; i++) {
                     //Put results from
