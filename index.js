@@ -58,11 +58,11 @@ pool.getConnection(function(err, connection) {
         // Don't use the connection here, it has been returned to the pool.
     });
 });
-*/
+
 dbcall().then(feeds => {
     console.log(feeds);
 });
-
+*/
 
 function rssparser(link,article1,article2) {
     //Function used to return promised feed
@@ -117,10 +117,12 @@ let handlers = {
 
     'RSSWordIntent': function () {
         let feedname = parseInt(this.event.request.intent.slots.feedname.value);
-        rssparser(csvarray[feedname][2],csvarray[feedname][3],csvarray[feedname][4]).then((rss)=>{
+        dbcall().then(feeds => {
+        rssparser(feeds[feedname][2],feeds[feedname][3],feeds[feedname][4]).then((rss)=>{
             // takes the link in the array and the property for the reader
             this.emit(':tell', rss);
-        })
+             })
+        });
     },
 
     'RSSLinkIntent': function () {
@@ -131,6 +133,7 @@ let handlers = {
                 name.push(feeds[value][0]);
                 name.push(feeds[value][1]);
             }
+            console.log(name);
             this.emit(':ask',`Would you like to open the rss feed for ${name}`, `Say: ${name}`);
         });
         /*for (let value=0; value<csvarray.length; value++){

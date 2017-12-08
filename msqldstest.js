@@ -1,7 +1,7 @@
 const mysql = require('mysql');
 const config = require('config');
 const dbConfig = config.get('db_log.dbConfig');
-let con = mysql.createConnection(dbConfig);
+///let con = mysql.createConnection(dbConfig);
 let pool = mysql.createPool(dbConfig);
 
 /*
@@ -26,7 +26,7 @@ con.connect(function(err) {
         console.log(article_2);
     });
 });
-*/
+
 
 function dbcall() {
     let feeds=[];
@@ -44,7 +44,7 @@ function dbcall() {
         });
     })
 }
-
+*/
 
 function dbcall2() {
     let feeds=[];
