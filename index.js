@@ -5,11 +5,12 @@ const dbConfig = config.get('db_log.dbConfig');
 let pool = mysql.createPool(dbConfig);
 
 function dbcall() {
+    ///returns a promised function filled with entries from the DB
     let feeds=[];
     return new Promise((resolve, reject) => {
         setTimeout(() => reject('woops'), 50000);
         pool.getConnection(function(err, connection) {
-            // Use the connection
+            // Use the connection to DB
             connection.query("SELECT * FROM rss_feed", function (err, result, fields) {
                 if (fields = ""){
                     console.log(fields)
@@ -49,6 +50,9 @@ function rssparser(link,article1,article2) {
                 rss.push(string);
             }
         });
+        if (rss.length>20){
+            rss=rss.slice(0,20)
+        }
         return rss;
     }).catch(error => console.error('error: ', error));
 }
@@ -65,6 +69,7 @@ let handlers = {
 
     'RSSWordIntent': function () {
         let feedname = parseInt(this.event.request.intent.slots.feedname.value);
+        console.log(feedname);
         dbcall().then(feeds => {
         rssparser(feeds[feedname][2],feeds[feedname][3],feeds[feedname][4]).then((rss)=>{
             // takes the link in the array and the property for the reader
@@ -72,6 +77,7 @@ let handlers = {
              })
         });
     },
+
 
     'RSSLinkIntent': function () {
         let name = [];
