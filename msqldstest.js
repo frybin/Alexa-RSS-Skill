@@ -73,6 +73,8 @@ function dbcall2() {
 function rssparser(link,article1,article2) {
     //Function used to return promised feed
     const feedparser = require('feedparser-promised');
+    let start;
+    let end;
     return feedparser.parse(link).then((items) => {
         let rss = [];
         items.forEach(item => {
@@ -82,11 +84,22 @@ function rssparser(link,article1,article2) {
                 rss.push(string);
             }else {
                 string = item[article1].replace('&', 'and');
+                while (string.includes('<') && string.includes('>')  ){
+                    start = string.indexOf('<');
+                    end = string.indexOf('>');
+                    string=string.slice(0,start)+string.slice(end,string.length)
+                }
                 rss.push(string);
             }
             if (article2 ===''){
             }else {
                 string = item[article2].replace('&', 'and');
+                while (string.includes('<') && string.includes('>')  ){
+                    start = string.indexOf('<');
+                    end = string.indexOf('>');
+                    console.log(start);
+                    string=string.slice(0,start)+string.slice(end,string.length)
+                }
                 rss.push(string);
             }
         });
@@ -110,7 +123,7 @@ dbcall2().then(feeds => {
 
 
 dbcall2().then(feeds => {
-    let feedname =4;
+    let feedname =1;
 rssparser(feeds[feedname][2],feeds[feedname][3],feeds[feedname][4]).then((rss)=>{
     console.log(rss)
     });
