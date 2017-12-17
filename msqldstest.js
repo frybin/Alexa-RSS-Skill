@@ -82,22 +82,19 @@ function rssparser(link,article1,article2) {
             let string = '';
             if (article1 === 'categories'){
                 string = item[article1][0];
-                //replace('&', 'and');
-                string = sanitizeHtml(string,{allowedTags: [ 'b', 'i', 'em', 'strong', 'p' ]});
+                string = sanitizeHtml(string,{allowedTags: [ ]});
                 string = stripAnsi(string);
                 rss.push(string);
             }else {
                 string = item[article1];
-                // replace('&', 'and');
-                string = sanitizeHtml(string,{allowedTags: [ 'b', 'i', 'em', 'strong', 'p' ]});
+                string = sanitizeHtml(string,{allowedTags: [ ]});
                 string = stripAnsi(string);
                 rss.push(string);
             }
             if (article2 ===''){
             }else {
                 string = item[article2];
-                //.replace('&', 'and');
-                string = sanitizeHtml(string,{allowedTags: [ 'b', 'i', 'em', 'strong', 'p' ]});
+                string = sanitizeHtml(string,{allowedTags: [ ]});
                 string = stripAnsi(string);
                 rss.push(string);
             }

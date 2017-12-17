@@ -3,6 +3,8 @@ const mysql = require('mysql');
 const config = require('config');
 const dbConfig = config.get('db_log.dbConfig');
 let pool = mysql.createPool(dbConfig);
+const sanitizeHtml = require('sanitize-html');
+const stripAnsi = require('strip-ansi');
 
 function dbcall() {
     ///returns a promised function filled with entries from the DB
@@ -38,15 +40,21 @@ function rssparser(link,article1,article2) {
         items.forEach(item => {
             let string = '';
             if (article1 === 'categories'){
-                string = item[article1][0].replace('&', 'and');
+                string = item[article1][0];
+                string = sanitizeHtml(string,{allowedTags: [ ]});
+                string = stripAnsi(string);
                 rss.push(string);
             }else {
-                string = item[article1].replace('&', 'and');
+                string = item[article1];
+                string = sanitizeHtml(string,{allowedTags: [  ]});
+                string = stripAnsi(string);
                 rss.push(string);
             }
             if (article2 ===''){
             }else {
-                string = item[article2].replace('&', 'and');
+                string = item[article2];
+                string = sanitizeHtml(string,{allowedTags: [  ]});
+                string = stripAnsi(string);
                 rss.push(string);
             }
         });

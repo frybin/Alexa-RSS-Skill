@@ -14,7 +14,7 @@
     "fact"
   ],
   "dependencies": {
-    "alexa-sdk": "^1.0.14",
+    "alexa-sdk": "^1.0.24",
     "config": "^1.28.1",
     "dotenv": "^4.0.0",
     "feedparser": "^2.2.1",
