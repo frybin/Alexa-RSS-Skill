@@ -73,8 +73,7 @@ function dbcall2() {
 function rssparser(link,article1,article2) {
     //Function used to return promised feed
     const feedparser = require('feedparser-promised');
-    let start;
-    let end;
+
     return feedparser.parse(link).then((items) => {
         let rss = [];
         items.forEach(item => {
@@ -84,22 +83,11 @@ function rssparser(link,article1,article2) {
                 rss.push(string);
             }else {
                 string = item[article1].replace('&', 'and');
-                while (string.includes('<') && string.includes('>')  ){
-                    start = string.indexOf('<');
-                    end = string.indexOf('>');
-                    string=string.slice(0,start)+string.slice(end,string.length)
-                }
                 rss.push(string);
             }
             if (article2 ===''){
             }else {
                 string = item[article2].replace('&', 'and');
-                while (string.includes('<') && string.includes('>')  ){
-                    start = string.indexOf('<');
-                    end = string.indexOf('>');
-                    console.log(start);
-                    string=string.slice(0,start)+string.slice(end,string.length)
-                }
                 rss.push(string);
             }
         });
@@ -111,7 +99,7 @@ function rssparser(link,article1,article2) {
 }
 
 
-dbcall2().then(feeds => {
+/*dbcall2().then(feeds => {
     let name = [];
     ///console.log(feeds);
     for (let value=0; value<feeds.length; value++){
@@ -119,7 +107,7 @@ dbcall2().then(feeds => {
         name.push(feeds[value][1]);
     }
     console.log(name);
-});
+});*/
 
 
 dbcall2().then(feeds => {
