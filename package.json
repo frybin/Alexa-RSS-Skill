@@ -21,6 +21,8 @@
     "feedparser-promised": "^1.4.2",
     "mysql": "^2.15.0",
     "request": "^2.83.0",
+    "sanitize-html": "^1.16.3",
+    "strip-ansi": "^4.0.0",
     "striptags": "^3.1.1",
     "ya-csv": "^0.10.1"
   }

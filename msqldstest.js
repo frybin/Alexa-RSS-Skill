@@ -3,6 +3,8 @@ const config = require('config');
 const dbConfig = config.get('db_log.dbConfig');
 ///let con = mysql.createConnection(dbConfig);
 let pool = mysql.createPool(dbConfig);
+const sanitizeHtml = require('sanitize-html');
+const stripAnsi = require('strip-ansi');
 
 /*
 con.connect(function(err) {
@@ -79,15 +81,24 @@ function rssparser(link,article1,article2) {
         items.forEach(item => {
             let string = '';
             if (article1 === 'categories'){
-                string = item[article1][0].replace('&', 'and');
+                string = item[article1][0];
+                //replace('&', 'and');
+                string = sanitizeHtml(string,{allowedTags: [ 'b', 'i', 'em', 'strong', 'p' ]});
+                string = stripAnsi(string);
                 rss.push(string);
             }else {
-                string = item[article1].replace('&', 'and');
+                string = item[article1];
+                // replace('&', 'and');
+                string = sanitizeHtml(string,{allowedTags: [ 'b', 'i', 'em', 'strong', 'p' ]});
+                string = stripAnsi(string);
                 rss.push(string);
             }
             if (article2 ===''){
             }else {
-                string = item[article2].replace('&', 'and');
+                string = item[article2];
+                //.replace('&', 'and');
+                string = sanitizeHtml(string,{allowedTags: [ 'b', 'i', 'em', 'strong', 'p' ]});
+                string = stripAnsi(string);
                 rss.push(string);
             }
         });
@@ -111,7 +122,7 @@ function rssparser(link,article1,article2) {
 
 
 dbcall2().then(feeds => {
-    let feedname =1;
+    let feedname =5;
 rssparser(feeds[feedname][2],feeds[feedname][3],feeds[feedname][4]).then((rss)=>{
     console.log(rss)
     });
