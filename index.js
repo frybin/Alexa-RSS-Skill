@@ -13,14 +13,14 @@ function dbcall() {
         setTimeout(() => reject('woops'), 50000);
         pool.getConnection(function(err, connection) {
             // Use the connection to DB
-            connection.query("SELECT * FROM rss_feed", function (err, result, fields) {
+            connection.query("SELECT * FROM feed", function (err, result, fields) {
                 if (fields = ""){
                     console.log(fields)
                 }
                 if (err) throw err;
                 for (i = 0; i < result.length; i++) {
                     //Put results from
-                    feeds.push([i.toString(),result[i].name,result[i].link,result[i].article_1,result[i].article_2])
+                    feeds.push([(i+1).toString(),result[i].name,result[i].link,result[i].article_1,result[i].article_2])
                 }
                 resolve(feeds);
                 connection.release();
@@ -77,6 +77,7 @@ let handlers = {
 
     'RSSWordIntent': function () {
         let feedname = parseInt(this.event.request.intent.slots.feedname.value);
+	feedname = feedname - 1 ;
         console.log(feedname);
         dbcall().then(feeds => {
         rssparser(feeds[feedname][2],feeds[feedname][3],feeds[feedname][4]).then((rss)=>{
