@@ -14,12 +14,9 @@ function dbcall() {
         pool.getConnection(function(err, connection) {
             // Use the connection to DB
             connection.query("SELECT * FROM feed", function (err, result, fields) {
-                if (fields = ""){
-                    console.log(fields)
-                }
                 if (err) throw err;
                 for (i = 0; i < result.length; i++) {
-                    //Put results from
+                    //Put results from database into array
                     feeds.push([(i+1).toString(),result[i].name,result[i].link,result[i].article_1,result[i].article_2])
                 }
                 resolve(feeds);
@@ -58,6 +55,7 @@ function rssparser(link,article1,article2) {
                 rss.push(string);
             }
         });
+        // Makes so there there can be a max of only 20 tag iteams from a feed
         if (rss.length>20){
             rss=rss.slice(0,20)
         }
@@ -77,11 +75,10 @@ let handlers = {
 
     'RSSWordIntent': function () {
         let feedname = parseInt(this.event.request.intent.slots.feedname.value);
-	feedname = feedname - 1 ;
-        console.log(feedname);
+	      feedname = feedname - 1 ;
         dbcall().then(feeds => {
         rssparser(feeds[feedname][2],feeds[feedname][3],feeds[feedname][4]).then((rss)=>{
-            // takes the link in the array and the property for the reader
+            // takes the link in the array and the tag for the reader and read out results
             this.emit(':tell', rss);
              })
         });
@@ -91,16 +88,15 @@ let handlers = {
     'RSSLinkIntent': function () {
         let name = [];
         dbcall().then(feeds => {
-            console.log(feeds);
+          // Gets feeds from MySQL databse and reads names out to users
             for (let value=0; value<feeds.length; value++){
                 name.push(feeds[value][0]);
                 name.push(feeds[value][1]);
             }
-            console.log(name);
             this.emit(':ask',`Would you like to open the rss feed for ${name}`, `Say: ${name}`);
         });
     },
-    
+
     'AMAZON.HelpIntent': function () {
         const speechOutput = 'This is the RSS Feed Reader Skill. ';
         const reprompt = 'Say read, to hear me speak.';
