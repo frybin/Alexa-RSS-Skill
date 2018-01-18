@@ -1,4 +1,4 @@
-###Alexa RSS Feed Reader
+### Alexa RSS Feed Reader
 
 This is a Amazon Alexa skill built using Node.JS and deployed on Amazon AWS Lambda.  
 It connects to a MySQL database that has
