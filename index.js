@@ -5,6 +5,8 @@ const dbConfig = config.get('db_log.dbConfig');
 let pool = mysql.createPool(dbConfig);
 const sanitizeHtml = require('sanitize-html');
 const stripAnsi = require('strip-ansi');
+let md5 = require('md5');
+
 
 function dbcall() {
     ///returns a promised function filled with entries from the DB
@@ -17,7 +19,7 @@ function dbcall() {
                 if (err) throw err;
                 for (i = 0; i < result.length; i++) {
                     //Put results from database into array
-                    feeds.push([(i+1).toString(),result[i].name,result[i].link,result[i].article_1,result[i].article_2])
+                    feeds.push([(i+1).toString(),result[i].name,result[i].link,result[i].article_1,result[i].article_2,result[i].rss_i,result[i].hash])
                 }
                 resolve(feeds);
                 connection.release();
@@ -69,7 +71,7 @@ let handlers = {
         this.emit('RSSLinkIntent');
     },
 
-    'HelloWorldIntent': function () {
+    'UpdateFeedIntent': function () {
         this.emit(':tell', 'Hello World!');
     },
 

@@ -14,16 +14,13 @@
     "fact"
   ],
   "dependencies": {
-    "alexa-sdk": "^1.0.24",
-    "config": "^1.28.1",
+    "alexa-sdk": "^1.0.25",
+    "config": "^1.29.2",
     "dotenv": "^4.0.0",
-    "feedparser": "^2.2.1",
-    "feedparser-promised": "^1.4.2",
+    "feedparser-promised": "^1.5.0",
+    "md5": "^2.2.1",
     "mysql": "^2.15.0",
-    "request": "^2.83.0",
-    "sanitize-html": "^1.16.3",
-    "strip-ansi": "^4.0.0",
-    "striptags": "^3.1.1",
-    "ya-csv": "^0.10.1"
+    "sanitize-html": "^1.17.0",
+    "strip-ansi": "^4.0.0"
   }
 }
