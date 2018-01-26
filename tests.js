@@ -30,7 +30,6 @@ function dbcall() {
 }
 
 function dbhashadd(hash,id) {
-    setTimeout(() => reject('woops'), 50000);
     pool.getConnection(function(err, connection) {
         // Use the connection to DB
         connection.query(`UPDATE feed SET hash = '${hash}' WHERE feed.rss_i = ${id}` );
@@ -57,8 +56,8 @@ function rssparser(link,article1,article2,id,hash,all) {
             newHash=md5(string);
             if(num === 1){dbhashadd(newHash,id);}
             num++;
-            rss.push(string);
             if (newHash === hash && all){break;}
+            rss.push(string);
             if (article2 ===''){
             }else {
                 string = item[article2];
@@ -80,30 +79,25 @@ function feedUpdates() {
         dbcall().then(function (feeds) {
             let updatedFeed = '';
             let counter = 1;
-            feeds.forEach(feed => {
+            for (let i = 0; i < feeds.length; ++i){
+                let feed = feeds[i];
                 rssparser(feed[2], feed[3], feed[4], feed[5], feed[6],true).then(function (rss) {
                     // takes the link in the array and the tag for the reader and read out results
-                    updatedFeed += (` The updated feed for ${feed[1]} is : ` + rss.toString() + ";");
-                    if (counter >= feeds.length) {
-                        resolve(updatedFeed)
-                    }
+                    if(rss.length===0){}else{
+                    updatedFeed += (` The updated feed for ${feed[1]} is : ` + rss.toString() + ";");}
+                    if (counter >= feeds.length)
+                        resolve(updatedFeed);
                     counter++;
+
                 });
-            });
+            }
         })
     })
 }
 
-
-dbcall().then(feeds => {
-    rssparser(feeds[0][2],feeds[0][3],feeds[0][4],feeds[0][5],feeds[0][6],false).then((rss)=>{
-        // takes the link in the array and the tag for the reader and read out results
-        console.log(rss);
-    })
-});
-
 feedUpdates().then(updatedFeed=>{
-    console.log(updatedFeed)
+    if (updatedFeed.length==0){console.log('There are no updates')}
+    else{console.log(updatedFeed)}
     }
 );
 
