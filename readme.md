@@ -8,6 +8,7 @@ It connects to a MySQL database that has
 3. A link to the RSS Feed
 4. A tag from the RSS Feed that Alexa would read out in the order it appears
 5. A second optional tag that could be left out
+6. A hash column which is char(32) in the databse and is used to keep track of new feeds.
 
 Before uploading the skill to AWS a config folder has to be created with a default.json inside setup as shown below so Lambda could connect to the MySQL external database
 
