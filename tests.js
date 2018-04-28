@@ -82,7 +82,6 @@ function feedUpdates() {
             for (let i = 0; i < feeds.length; ++i){
                 let feed = feeds[i];
                 rssparser(feed[2], feed[3], feed[4], feed[5], feed[6],true).then(function (rss) {
-                    // takes the link in the array and the tag for the reader and read out results
                     if(rss.length===0){}else{
                     updatedFeed += (` The updated feed for ${feed[1]} is : ` + rss.toString() + ";");}
                     if (counter >= feeds.length)
