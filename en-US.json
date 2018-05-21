@@ -1,0 +1,68 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "feeder",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "QuestionIntent",
+                    "slots": [],
+                    "samples": []
+                },
+                {
+                    "name": "RSSLinkIntent",
+                    "slots": [],
+                    "samples": [
+                        "main menu",
+                        "tell me the feeds",
+                        "open feed menu",
+                        "open menu",
+                        "what feeds are avalible",
+                        "feeds",
+                        "what are my feeds",
+                        "tell me my feeds"
+                    ]
+                },
+                {
+                    "name": "RSSWordIntent",
+                    "slots": [
+                        {
+                            "name": "feedname",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "{feedname}",
+                        "open {feedname}",
+                        "tell me {feedname} feed"
+                    ]
+                },
+                {
+                    "name": "UpdateFeedIntent",
+                    "slots": [],
+                    "samples": [
+                        "update",
+                        "updates",
+                        "give me the updates",
+                        "i want to hear the updates",
+                        "what are my updates",
+                        "latest update",
+                        "what is the latest update"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
