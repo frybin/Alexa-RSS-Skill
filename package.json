@@ -1,7 +1,7 @@
 {
   "name": "reader",
   "version": "0.0.1",
-  "main": "index.js",
+  "main": "start.js",
   "description": "1st version of rss skill.",
   "author": "Fred Rybin",
   "repository": "https://github.com/frybin/Alexa-RSS-Skill",

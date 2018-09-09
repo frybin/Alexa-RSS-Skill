@@ -38,7 +38,6 @@ jspm_packages
 .node_repl_history
 
 #Optional directories
-config
 .idea
 .idea/workspace.xml
 
