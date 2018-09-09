@@ -1,12 +1,12 @@
 {
-  "name": "reader",
-  "version": "0.0.1",
+  "name": "rss-reader",
+  "version": "0.0.2",
   "main": "start.js",
   "description": "1st version of rss skill.",
   "author": "Fred Rybin",
   "repository": "https://github.com/frybin/Alexa-RSS-Skill",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node start.js"
   },
   "keywords": [
     "alexa",

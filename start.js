@@ -7,7 +7,6 @@ const sanitizeHtml = require('sanitize-html');
 const stripAnsi = require('strip-ansi');
 let md5 = require('md5');
 
-
 function dbcall() {
     ///returns a promised function filled with entries from the DB
     let feeds=[];
@@ -124,7 +123,6 @@ let handlers = {
              })
         });
     },
-
 
     'RSSLinkIntent': function () {
         let name = [];

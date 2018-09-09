@@ -1,0 +1,11 @@
+{
+  "db_log": {
+    "dbConfig": {
+      "host": "DBHOME",
+      "user": "DBUSER",
+      "password": "DBPASSWORD",
+      "database": "DBDATABASE"
+    }
+  }
+}
+
