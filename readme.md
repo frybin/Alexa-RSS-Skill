@@ -26,6 +26,7 @@ Before uploading the skill to AWS a config folder has to be created with a defau
 ```
 
 When starting the skill, Alexa will read out to you the RSS Feed Names in the order they appear with a number in-front of each name<br>
+
 Example Response from Alexa:
 
 - Would you like to open the RSS Feed for 1 Wuxiaworld, 2 Blue Silver Translations
