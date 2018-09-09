@@ -40,4 +40,5 @@ jspm_packages
 #Optional directories
 .idea
 .idea/workspace.xml
+.node_modules/
 
